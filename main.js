@@ -1,4 +1,98 @@
-// Arrays
+// Object Literals
+// JSON is similar to object literals
+
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    hobbies: ['music','movies', 'sports'],
+    address: {
+        street: '50 main st',
+        city: 'Boston',
+        state: 'MA'
+    }
+}
+console.log(person);
+
+// access single value
+console.log(person.firstName);
+
+// access two values
+console.log(person.firstName, person.lastName);
+
+// access a value inside an array
+console.log(person.hobbies[1]);
+
+// get value in an object
+console.log(person.address.city);
+
+// pull values from an object
+const {firstName, lastName, address: { city }} = person;
+console.log(firstName);
+console.log(lastName);
+console.log(city);
+
+// add properties to an object
+person.email = 'john@email.com'
+console.log(person); 
+
+
+
+const todos = [
+    {
+        id: 1, 
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2, 
+        text: 'Meeting with boss',
+        isCompleted: true
+    },
+    {
+        id: 3, 
+        text: 'Dentist appointment',
+        isCompleted: false
+    },
+
+];
+console.log(todos);
+
+// print text of second object
+console.log(todos[1].text);
+
+
+// convert object to JSON
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Arrays
 // Arrays are variables that hold multiple values
 
 // constructing an array with 'new' keyword
@@ -44,7 +138,7 @@ console.log(Array.isArray(fruits)); // true
 console.log(Array.isArray('hello')); // false
 
 // get index of value
-console.log(fruits.indexOf('oranges')); // 2
+console.log(fruits.indexOf('oranges')); // 2 */
 
 
 
