@@ -1,4 +1,106 @@
-// Object Literals
+// Loops, Map and Filter
+
+// For loop
+// print iteration number
+
+for(let i = 0; i < 10; i++){
+    console.log(`For Loop Number: ${i}`);
+}
+
+// start from 0
+// run code until i is less than 10
+// each time increment i value by 1
+
+
+// While Loop
+let i = 0;
+while(i < 10){
+    console.log(`While Loop Number: ${i}`);
+    i++; 
+}
+
+
+// Loop through an object
+
+const todos = [
+    {
+        id: 1, 
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2, 
+        text: 'Meeting with boss',
+        isCompleted: true
+    },
+    {
+        id: 3, 
+        text: 'Dentist appointment',
+        isCompleted: false
+    },
+
+];
+
+
+for(let i = 0; i < todos.length; i++){
+    console.log(todos[i].text);
+}
+
+// start from 0
+// run code until length of todos is less than i
+// take i as index of todos and output value of 'text'
+// in each iteration increment i by 1
+
+
+// Another way
+
+// get the ids
+for(let todo of todos){
+    console.log(todo.id);
+}
+
+
+
+// forEach
+todos.forEach(function(todo){
+    console.log(todo.text);
+});
+
+
+// Map
+// take values and return as an array 
+const todoText = todos.map(function(todo){
+    return todo.text;
+});
+console.log(todoText);
+
+// Filter
+// return items in which isCompleted is 'true'
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+});
+console.log(todoCompleted);
+
+
+// return text from filtered items
+const todoCompletedText = todos.filter(function(todo){
+    return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
+});
+console.log(todoCompletedText);
+
+
+
+
+
+
+
+
+
+
+
+/* // Object Literals
 // JSON is similar to object literals
 
 const person = {
@@ -64,7 +166,7 @@ console.log(todos[1].text);
 
 // convert object to JSON
 const todoJSON = JSON.stringify(todos);
-console.log(todoJSON);
+console.log(todoJSON); */
 
 
 
