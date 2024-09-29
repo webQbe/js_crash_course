@@ -1,4 +1,100 @@
-// Loops, Map and Filter
+// Conditionals
+
+const x = 4;
+
+if (x == 10){
+    console.log('x is 10');
+}
+// This is still true even if x's value is a string (x = '10')
+
+// x = '10' is not true, as '===' matches data types
+if (x === 10){
+
+    console.log('x is 10');
+
+} else if (x > 10) {
+
+    console.log('x is greater than 10');
+
+} else {
+
+    console.log('x is less than 10');
+
+} 
+
+
+// Multiple Conditions
+
+const y = 6;
+const z = 11;
+
+// check one condition OR other
+if(y > 5 || z > 10){
+
+    console.log('y is more than 5 or z is more than 10');
+
+}
+
+// check both conditions
+if(y > 5 && z > 10){
+
+    console.log('y is more than 5 and z is more than 10');
+
+}
+
+
+// Ternary Operator
+const i = 11;
+const color = i > 10 ? 'red' : 'blue';
+// '=' - if
+// '?' - then
+// ':' - else
+
+console.log(color);
+
+
+
+// Switches
+
+/* const i = 9;
+const c = i > 10 ? 'red' : 'blue'; */
+
+const c = 'green';
+
+switch(c){
+
+    case 'red':
+        console.log('color is red'); 
+        break;
+
+    case 'blue':
+        console.log('color is blue'); 
+        break;
+
+    default:
+        console.log('color is NOT red or blue');
+        break; 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Loops, Map and Filter
 
 // For loop
 // print iteration number
@@ -88,15 +184,7 @@ const todoCompletedText = todos.filter(function(todo){
 }).map(function(todo){
     return todo.text;
 });
-console.log(todoCompletedText);
-
-
-
-
-
-
-
-
+console.log(todoCompletedText);*/
 
 
 
@@ -167,28 +255,6 @@ console.log(todos[1].text);
 // convert object to JSON
 const todoJSON = JSON.stringify(todos);
 console.log(todoJSON); */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -290,10 +356,10 @@ console.log(tag.split(', ')); */
 
 
 
-// Data Types
+/* // Data Types
 // Strings, Numbers, Boolean, Null, Undefined
 
-/* const name = 'John'; 
+ const name = 'John'; 
 const age = 30; 
 const rating = 4.5; 
 const isCool = true;
