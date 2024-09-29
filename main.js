@@ -1,4 +1,47 @@
-// Conditionals
+// Functions
+
+// create function
+function addNums(num1, num2){
+    console.log(`Total of the values is ${num1 + num2}`);
+}
+
+// set default values to parameters
+function addNums(num1 = 1, num2 = 1){
+    console.log(`Total of the values is ${num1 + num2}`);
+}
+
+// call function
+addNums(5, 5);
+
+// default values will be overwrited
+
+
+// return result 
+function addNums(num1 = 1, num2 = 1){
+    return `Total of the values is ${num1 + num2}`;
+}
+
+// output result
+console.log(addNums(5, 5));
+
+
+// Arrow Functions =>
+
+const addNums = (num1 = 1, num2 = 1) => num1 + num2;
+console.log(addNums(5,5));
+
+
+// arrow function with single parameter
+const addNum = num1 => num1 + 5;
+console.log(addNum(5,5));
+
+
+
+
+
+
+
+/* // Conditionals
 
 const x = 4;
 
@@ -56,8 +99,8 @@ console.log(color);
 
 // Switches
 
-/* const i = 9;
-const c = i > 10 ? 'red' : 'blue'; */
+// const i = 9;
+// const c = i > 10 ? 'red' : 'blue'; 
 
 const c = 'green';
 
@@ -75,24 +118,8 @@ switch(c){
         console.log('color is NOT red or blue');
         break; 
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} 
+*/
 
 /* // Loops, Map and Filter
 
@@ -186,8 +213,6 @@ const todoCompletedText = todos.filter(function(todo){
 });
 console.log(todoCompletedText);*/
 
-
-
 /* // Object Literals
 // JSON is similar to object literals
 
@@ -256,10 +281,6 @@ console.log(todos[1].text);
 const todoJSON = JSON.stringify(todos);
 console.log(todoJSON); */
 
-
-
-
-
 /* // Arrays
 // Arrays are variables that hold multiple values
 
@@ -308,10 +329,6 @@ console.log(Array.isArray('hello')); // false
 // get index of value
 console.log(fruits.indexOf('oranges')); // 2 */
 
-
-
-
-
 /* // Strings
 
 const name = 'John'; 
@@ -353,9 +370,6 @@ console.log(s.split('')); // add '' to split by letter
 const tag = 'technology, computers, it, code';
 console.log(tag.split(', ')); */
 
-
-
-
 /* // Data Types
 // Strings, Numbers, Boolean, Null, Undefined
 
@@ -375,20 +389,9 @@ console.log(typeof x); // x is not an object, it's null
 console.log(typeof y); // undefined
 console.log(typeof z); // undefined */
 
+/* // Variables
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* let age = 30;
+let age = 30;
 // change let value
 age = 31;
 console.log(age);
@@ -396,9 +399,9 @@ console.log(age);
 
 let score;
 score = 10;
-console.log(score); */
+console.log(score); 
 
-/* const myscore;
+const myscore;
 // you must add a value to const
 const myscore = 10;
 
@@ -407,7 +410,6 @@ const myage = 30;
 myage = 31;
 console.log(age);
 // a const cannot be changed :Uncaught TypeError: invalid assignment to const 'myage' */
- 
 
 
 
