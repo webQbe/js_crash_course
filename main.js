@@ -1,4 +1,56 @@
-// Strings
+// Arrays
+// Arrays are variables that hold multiple values
+
+// constructing an array with 'new' keyword
+const numbers = new Array(1,2,3,4,5);
+console.log(numbers);
+
+// create an array with []
+// you can put multiple data types 
+const fruits = ['apples', 'oranges', 'pears', 10, true];
+console.log(fruits);
+
+// accessing array values
+console.log(fruits[1]); // oranges
+
+
+
+// adding a value to array location
+fruits[3] = 'grapes';
+
+console.log(fruits); // 10 replaced with grapes
+
+
+// fruits = []; 
+// you can change values in a const array, but you cannot re-assign it. 
+
+
+// when you don't know how many values in an array,
+// you can push a value to end
+
+fruits.push('mangoes');
+console.log(fruits); 
+
+// you can push a value to start
+fruits.unshift('strawberries');
+console.log(fruits); 
+
+// remove last value
+fruits.pop();
+console.log(fruits); 
+
+// check if something is not an array
+console.log(Array.isArray(fruits)); // true
+console.log(Array.isArray('hello')); // false
+
+// get index of value
+console.log(fruits.indexOf('oranges')); // 2
+
+
+
+
+
+/* // Strings
 
 const name = 'John'; 
 const age = 30; 
@@ -37,7 +89,7 @@ console.log(s.split('')); // add '' to split by letter
 
 // separating words ending with ', '
 const tag = 'technology, computers, it, code';
-console.log(tag.split(', '));
+console.log(tag.split(', ')); */
 
 
 
