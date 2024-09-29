@@ -1,7 +1,51 @@
+// Strings
+
+const name = 'John'; 
+const age = 30; 
+
+// Concatenation
+console.log('My name is ' + name + ' and I am ' + age); 
+
+// Template String
+console.log(`My name is ${name} and I am ${age}`);
+
+// assign string to a variable
+const hello = `My name is ${name} and I am ${age}`;
+console.log(hello);
+
+
+// string methods
+
+// get the length of a string
+const s = 'Hello World!';
+console.log(s.length); 
+
+// convert to uppercase
+console.log(s.toUpperCase());
+
+// convert to lowercase
+console.log(s.toLowerCase());
+
+// substring
+console.log(s.substring(0, 5)); // Hello
+
+// convert substring to uppercase
+console.log(s.substring(0, 5).toUpperCase());
+
+// split a string into an array
+console.log(s.split('')); // add '' to split by letter
+
+// separating words ending with ', '
+const tag = 'technology, computers, it, code';
+console.log(tag.split(', '));
+
+
+
+
 // Data Types
 // Strings, Numbers, Boolean, Null, Undefined
 
-const name = 'John'; 
+/* const name = 'John'; 
 const age = 30; 
 const rating = 4.5; 
 const isCool = true;
@@ -15,7 +59,7 @@ console.log(typeof rating); // number
 console.log(typeof isCool); // boolean
 console.log(typeof x); // x is not an object, it's null 
 console.log(typeof y); // undefined
-console.log(typeof z); // undefined
+console.log(typeof z); // undefined */
 
 
 
