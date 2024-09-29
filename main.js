@@ -1,4 +1,126 @@
-// Functions
+// OOP - Object Oriented Programming
+
+// Constructor function
+// Name should start with capital letter
+
+function Person(firstName, lastName, DoB){
+
+    this.firstName = firstName; // make properties with 'this' keyword
+    this.lastName = lastName;
+    // this.DoB = DoB;
+    this.DoB = new Date(DoB); // pass date object
+
+}
+
+// Instantiate object
+const person1 = new Person('John', 'Doe', '4-3-1980');
+const person2 = new Person('Mary', 'Smith', '3-6-1970');
+
+//console.log(person1);
+
+// get value of a property of an object
+//console.log(person2.DoB);
+
+// get the year of DoB
+//console.log(person1.DoB.getFullYear());
+
+
+
+
+// Adding methods to an object
+function Author(firstName, lastName, DoB){
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.DoB = new Date(DoB);
+
+    // method to get year from birthdate
+    this.getBirthYear = function(){
+        return this.DoB.getFullYear();
+    }
+
+    // method to get fullname
+    this.getFullName = function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+}
+
+const author1 = new Author('John', 'Doe', '4-3-1980');
+const author2 = new Author('Mary', 'Smith', '3-6-1970');
+
+// call method
+//console.log(author1.getBirthYear());
+//console.log(author1.getFullName());
+
+
+
+
+
+// Prototypes
+
+function Seller(firstName, lastName, DoB){
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.DoB = new Date(DoB);
+
+}
+
+// adding functions to prototypes
+
+Seller.prototype.getBirthYear = function(){
+    return this.DoB.getFullYear();
+}
+
+Seller.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}
+
+const seller1 = new Seller('John', 'Doe', '4-3-1980');
+const seller2 = new Seller('Mary', 'Smith', '3-6-1970');
+
+//console.log(seller1.getFullName());
+//console.log(seller1);
+
+
+
+
+// Classes
+
+class Driver {
+    constructor(firstName, lastName, DoB){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.DoB = new Date(DoB);
+    }
+
+    getBirthYear(){
+        return this.DoB.getFullYear();
+    }
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const driver1 = new Driver('John', 'Doe', '4-3-1980');
+const driver2 = new Driver('Mary', 'Smith', '3-6-1970');
+
+console.log(driver2.getFullName());
+console.log(driver1);
+
+
+
+
+
+
+
+
+
+
+
+/* // Functions
 
 // create function
 function addNums(num1, num2){
@@ -33,13 +155,7 @@ console.log(addNums(5,5));
 
 // arrow function with single parameter
 const addNum = num1 => num1 + 5;
-console.log(addNum(5,5));
-
-
-
-
-
-
+console.log(addNum(5,5)); */
 
 /* // Conditionals
 
