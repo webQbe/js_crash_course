@@ -1,4 +1,160 @@
-// OOP - Object Oriented Programming
+// DOM - Document Object Model
+
+// We can select html elements and put them into variables
+// There are Single and Multiple element selectors
+
+ 
+// the window object is the parent object of the browser
+console.log(window);
+
+
+// Single Element Selectors
+
+console.log(document.getElementById('my-form'));
+// logs element in the console
+
+// you can also assign it to a variable
+const form = document.getElementById('my-form');
+console.log(form);
+
+// querySelector selects the first element
+console.log(document.querySelector('#my-form'));
+console.log(document.querySelector('.container'));
+console.log(document.querySelector('h1'));
+
+
+
+// Multiple Element Selectors
+
+// querySelectorAll() 
+// selects all elements in the same class
+console.log(document.querySelectorAll('.item'));
+
+// getElementsByClassName()
+console.log(document.getElementsByClassName('item'));
+// this returns html collection
+// you cannot use array methods on a html collection
+
+// getElementsByTagName()
+console.log(document.getElementsByTagName('li'));
+// this returns html collection
+
+
+// Looping
+
+const items = document.querySelectorAll('.item');
+
+// loop through list and get each item
+items.forEach((item) => console.log(item));
+
+
+// Manipulating the DOM
+
+// removing elements
+const ul = document.querySelector('.items');
+
+// ul.remove();
+// list dissapeared
+
+// remove last item
+// ul.lastElementChild.remove();
+
+// set first item's text property
+ul.firstElementChild.textContent = 'Hello';
+
+// set 2nd item's text
+ul.children[1].innerHTML = 'Brad';
+
+// add html
+// ul.lastElementChild.innerHTML = '<h1>Hello</h1>'; 
+
+
+// Adding styles
+
+// change button color
+const btn = document.querySelector('.btn');
+// btn.style.background = 'red';
+
+// Event listeners
+// run a function when an event happens
+// you can also use mouseover - run code on hover
+// you can also use mouseout - run code on hover and exit
+
+btn.addEventListener('mouseout', (e) => {
+
+    e.preventDefault(); // prevent default behavior of submit button
+
+    console.log('Button clicked!'); 
+
+    // console.log(e); // show attributes of event (click) event
+    // console.log(e.target); // see where the button is
+    // console.log(e.target.className); // get class name of button
+    // console.log(e.target.id); // get id
+
+    // change form background color
+    document.querySelector('#my-form').style.background = '#CCC';
+
+    // add a css class to html body 
+    // document.querySelector('body').classList.add('bg-dark');
+
+    // add html
+    ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
+})
+
+
+// displaying form input data
+
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+
+myForm.addEventListener('submit', onsubmit);
+
+function onsubmit(e) {
+    e.preventDefault();
+
+    // form validation
+    if(nameInput.value === '' || emailInput.value === ''){
+
+        // alert('Please enter fields!');
+        msg.classList.add('error'); // add .error class
+        msg.innerHTML = 'Please enter all fields!'; // display on page
+
+        // disappear error message in 3 seconds
+        setTimeout(() => msg.remove(), 3000);
+
+    } else {
+        console.log('success');
+
+        // add input items to a list
+
+        // create a list item
+        const li = document.createElement('li'); 
+        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+
+        // append item to list
+        userList.appendChild(li);
+
+        // clear form fields
+        nameInput.value = '';
+        emailInput.value = '';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* // OOP - Object Oriented Programming
 
 // Constructor function
 // Name should start with capital letter
@@ -23,8 +179,6 @@ const person2 = new Person('Mary', 'Smith', '3-6-1970');
 
 // get the year of DoB
 //console.log(person1.DoB.getFullYear());
-
-
 
 
 // Adding methods to an object
@@ -54,9 +208,6 @@ const author2 = new Author('Mary', 'Smith', '3-6-1970');
 //console.log(author1.getFullName());
 
 
-
-
-
 // Prototypes
 
 function Seller(firstName, lastName, DoB){
@@ -84,8 +235,6 @@ const seller2 = new Seller('Mary', 'Smith', '3-6-1970');
 //console.log(seller1);
 
 
-
-
 // Classes
 
 class Driver {
@@ -108,17 +257,7 @@ const driver1 = new Driver('John', 'Doe', '4-3-1980');
 const driver2 = new Driver('Mary', 'Smith', '3-6-1970');
 
 console.log(driver2.getFullName());
-console.log(driver1);
-
-
-
-
-
-
-
-
-
-
+console.log(driver1); */
 
 /* // Functions
 
